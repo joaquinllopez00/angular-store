@@ -1,0 +1,11 @@
+span {
+  font-size: 40px;
+}
+
+.glyphicon {
+  color: aquamarine;
+}
+
+.glyphicon:hover {
+  cursor: pointer;
+}

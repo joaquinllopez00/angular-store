@@ -1,0 +1,19 @@
+<div class="zippy-container">
+  <div
+    class="content-container"
+    [style.backgroundColor]="expanded ? '#F1f1f1' : '#fff'"
+  >
+    <span>
+      {{ title }}
+    </span>
+    <span
+      class="glyphicon"
+      [ngClass]="expanded ? 'glyphicon-chevron-up' : 'glyphicon-chevron-down'"
+      (click)="expandDropdown()"
+    ></span>
+  </div>
+  <div class="dropdown-container" [hidden]="!expanded" [ngSwitch]="title">
+    <span *ngSwitchCase="'Shipping Details'"> Shipping Details Contents </span>
+    <span *ngSwitchCase="'Billing Details'">Billing Details Contents</span>
+  </div>
+</div>
